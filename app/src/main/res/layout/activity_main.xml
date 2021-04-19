@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/iv_music"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="26dp"
+        android:contentDescription="@string/music_photo"
+        android:background="@color/black"/>
+
+    <SeekBar
+        android:id="@+id/sb_audio"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/iv_music"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"
+        android:layout_marginHorizontal="26dp"/>
+
+    <TextView
+        android:id="@+id/tv_runningTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/sb_audio"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginHorizontal="24dp"
+        android:textColor="@color/black"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:id="@+id/tv_maxTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/sb_audio"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="24dp"
+        android:textColor="@color/black"
+        android:textSize="14sp"/>
+
+    <ImageButton
+        android:id="@+id/ib_playPause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_pause"
+        android:background="@android:color/transparent"
+        app:layout_constraintTop_toBottomOf="@id/tv_runningTime"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"/>
+
+    <ImageButton
+        android:id="@+id/ib_forward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_forward"
+        android:background="@android:color/transparent"
+        app:layout_constraintTop_toTopOf="@id/ib_playPause"
+        app:layout_constraintBottom_toBottomOf="@id/ib_playPause"
+        app:layout_constraintStart_toEndOf="@id/ib_playPause"
+        android:layout_marginStart="24dp"/>
+
+    <ImageButton
+        android:id="@+id/ib_backward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_backward"
+        android:background="@android:color/transparent"
+        app:layout_constraintTop_toTopOf="@id/ib_playPause"
+        app:layout_constraintBottom_toBottomOf="@id/ib_playPause"
+        app:layout_constraintEnd_toStartOf="@id/ib_playPause"
+        android:layout_marginEnd="24dp"/>
+
+    <ImageButton
+        android:id="@+id/ib_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_next"
+        android:background="@android:color/transparent"
+        app:layout_constraintTop_toTopOf="@id/ib_playPause"
+        app:layout_constraintBottom_toBottomOf="@id/ib_playPause"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="24dp"/>
+
+    <ImageButton
+        android:id="@+id/ib_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_back"
+        android:background="@android:color/transparent"
+        app:layout_constraintTop_toTopOf="@id/ib_playPause"
+        app:layout_constraintBottom_toBottomOf="@id/ib_playPause"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="24dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
